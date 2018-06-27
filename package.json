@@ -1,0 +1,12 @@
+{
+  "name": "document-generator",
+  "version": "0.0.1",
+  "dependencies": {
+    "markdown-styles": "~3.x.x"
+  },
+  "description": "Um gerador de documentação em HTML à partir de arquivos markdown",
+  "scripts": {
+    "preinstall": "npm i -g markdown-styles",
+    "generate": "generate-md --layout mixu-bootstrap-2col --input ./input --output ./generated"
+  }
+}
