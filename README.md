@@ -36,6 +36,8 @@ Caso você precise editá-lo, pode fazê-lo no arquivo package.json ou executand
 
 O conteúdo da pasta generated (que só aparece após a geração e não é comitada no repositório) contém o HTML gerado automaticamente à partir dos arquivos markdown (*.md).
 
+Os arquivos não são apagados na pasta numa nova geração, sendo interessante apagá-los manualmente caso a modificação não tenha sido exclusiva em seus conteúdos.
+
 # Vantagens
 
 As vantagens de uso dessa ferramenta são:
