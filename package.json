@@ -2,11 +2,14 @@
   "name": "document-generator",
   "version": "0.0.1",
   "dependencies": {
-    "markdown-styles": "~3.x.x"
+    "markdown-styles": "~3.x.x",
+    "replace-in-file": "~3.4.x"
   },
   "description": "Um gerador de documentação em HTML à partir de arquivos markdown",
   "scripts": {
-    "preinstall": "npm i -g markdown-styles",
-    "generate": "generate-md --layout mixu-bootstrap-2col --input ./input --output ./generated"
+    "preinstall": "npm i -g markdown-styles && npm i -g replace-in-file",
+    "generate:html": "generate-md --layout mixu-bootstrap-2col --input ./input --output ./generated",
+    "generate:version" : "node versionControl.js",
+    "generate" : "npm run generate:html && npm run generate:version"
   }
 }

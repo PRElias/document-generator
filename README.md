@@ -8,7 +8,7 @@ Se você precisa ou pretende fazer modificações, recomendo fortemente o fork d
 
 node / npm
 
-Você precisará ter o ["npm"](https://www.npmjs.com/get-npm) instalado para conseguir executar. Além disso, é necessário ter instalado globalmente o pacote do markdown-styles, porém essa instalação é feita automáticamente.
+Você precisará ter o ["npm"](https://www.npmjs.com/get-npm) instalado para conseguir executar. Além disso, é necessário ter instalado globalmente o pacote do markdown-styles e localmente o do replace-in-files, porém essas instalações são feitas automaticamente.
 
 # Como usar
 
@@ -38,6 +38,18 @@ O conteúdo da pasta generated (que só aparece após a geração e não é comi
 
 Os arquivos não são apagados na pasta numa nova geração, sendo interessante apagá-los manualmente caso a modificação não tenha sido exclusiva em seus conteúdos.
 
+## Data da versão
+
+Se o arquivo index.md tiver sido "comitado" no repositório antes da geração (o que é recomendável), a data do commit será apresentada no arquivo (conforme exemplo), no lugar da variável @version.
+
+Sendo assim, é recomendável também que você mantenha toda sua documentação no próprio arquivo index.md, sem alterar seu nome ou pode, é claro, fazer as alterações ou incluir mais arquivos, mas aí precisará customizar o comando de geração.
+
+Para gerar sem executar a atualização da data da versão use:
+
+```
+npm run generate:html
+```
+
 # Vantagens
 
 As vantagens de uso dessa ferramenta são:
@@ -46,3 +58,4 @@ As vantagens de uso dessa ferramenta são:
 * Disseminação do conhecimento sobre repositórios entre analistas
 * Facilitação da exibição das regras em formato website (publicação)
 * A linguagem markdown é mais simples que HTML
+* Apresentação da data da versão no HTML

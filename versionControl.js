@@ -1,15 +1,22 @@
-const exec = require('child_process').exec;
+const exec = require('child_process').execSync;
+const replace = require('replace-in-file');
 
-const ls = exec('git log -1 --format=%cd input/index.md')
+//Monta o comando
+const ls = exec('git log -1 --format=%cd input/index.md');
 
-ls.stdout.on('data', (data) => {
-    console.log(`stdout: ${data}`);
-});
+//Executa o comando de forma síncrona colocando o resultado na variável
+var versionDate = ls.toString();
 
-ls.stderr.on('data', (data) => {
-    console.log(`stderr: ${data}`);
-});
+//Trocando a variável no arquivo
+const options = {
+  files: 'generated/index.html',
+  from: '@version',
+  to: versionDate,
+};
 
-ls.on('close', (code) => {
-    console.log(`child process exited with code ${code}`);
-});
+replace(options, (error, changes) => {
+    if (error) {
+      return console.error('Error occurred:', error);
+    }
+    console.log('Modified files:', changes.join(', '));
+  });

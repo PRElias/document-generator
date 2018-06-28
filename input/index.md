@@ -26,3 +26,9 @@ Para escrever códigos, como PHP, C#, Javascript ou Shell, como fiz algumas veze
 # Exemplo de item - Referências
 
 Para maiores informações e dicas sobre markdown, acesse este link https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet. Infelizmente nem todas as sintaxes markdown funcionam, mas mesmo assim é possível escrever uma documentação minimamente decente e de fácil navegação.
+
+# Versão da documentação
+
+Se o documento markdown tiver sido "comitado" no repositório antes da geração, a informação abaixo apresentará corretamente a data do commit. Sendo assim é recomendável que você sempre realize o commit antes da geração e não altere o nome da variável aqui no arquivo.
+
+@version
